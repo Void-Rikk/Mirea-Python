@@ -1,3 +1,6 @@
+import test
+
+
 def fast_pow(a, b):
     result = 1
 
@@ -14,9 +17,9 @@ def fast_pow(a, b):
 
 
 def main():
-    assert fast_pow(3, 3) == 27
-    assert fast_pow(2, 4) == 16
-    assert fast_pow(2, 0) == 1
+    for i in range(30):
+        for j in range(10):
+            test(fast_pow(i, j), i**j)
 
 if __name__ == '__main__':
     main()
