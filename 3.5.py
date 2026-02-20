@@ -1,3 +1,6 @@
+import test
+
+
 def fast_mul(a, b):
     result = 0
     
@@ -12,10 +15,9 @@ def fast_mul(a, b):
 
 
 def main():
-    assert fast_mul(3, 5) == 15
-    assert fast_mul(5, 5) == 25
-    assert fast_mul(-2, 5) == -10
-    assert fast_mul(0, 5) == 0
+    for i in range(50):
+        for j in range(50):
+            test(fast_mul(i, j), i * j)
 
 if __name__ == '__main__':
     main()
